@@ -29,4 +29,4 @@ jobs:
           echo "$PERCENTAGE" >> $GITHUB_STEP_SUMMARY
           du -h -d 3 .vercel/output/functions/en
           vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} > domain.txt
-          vercel alias --scope ${{ secrets.VERCEL_TEAM_ID }} --token ${{ secrets.VERCEL_TOKEN }} set `cat domain.txt` biodrop-preview.vercel.app
+          vercel alias --scope ${{ secrets.VERCEL_TEAM_ID }} --token ${{ secrets.VERCEL_TOKEN }} set `cat domain.txt` student-management-preview.vercel.app
