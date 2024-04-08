@@ -10,6 +10,8 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "jsx": "preserve",
     "incremental": true,
     "plugins": [
@@ -23,7 +25,8 @@
       "@db/*": ["./lib/dbClient/*"],
       "@repo/*": ["./lib/data/repository/*"],
       "@dataSource/*": ["./lib/data/datasources/*"],
-      "@model/*": ["./lib/data/models/*"]
+      "@model/*": ["./lib/data/models/*"],
+      "@di/*": ["./di/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
