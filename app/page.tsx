@@ -1,6 +1,10 @@
 import Image from "next/image";
+import {container} from 'tsyringe'
+import {type IUserRepository} from '@repo/users/IUserRepository'
+import {USER_REPO} from '@di/constants'
 
-export default function Home() {
+export default async function Home() {
+  const data = await container.resolve<IUserRepository>(USER_REPO).fetchTestData()
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
@@ -53,7 +57,7 @@ export default function Home() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+            {data}
           </p>
         </a>
 
