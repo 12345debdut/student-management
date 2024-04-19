@@ -21,14 +21,22 @@
     ],
     "paths": {
       "@components/*": ["./components/*"],
-      "@lib/*" : ["./lib/*"],
+      "@lib/*": ["./lib/*"],
       "@db/*": ["./lib/dbClient/*"],
       "@repo/*": ["./lib/data/repository/*"],
       "@dataSource/*": ["./lib/data/datasources/*"],
       "@model/*": ["./lib/data/models/*"],
-      "@di/*": ["./di/*"]
+      "@di/*": ["./di/*"],
+      "@client/*": ["./client/*"],
+      "@hook/*": ["./hooks/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "tailwind.config.js"
+  ],
   "exclude": ["node_modules"]
 }
