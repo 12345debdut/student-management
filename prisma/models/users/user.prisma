@@ -5,4 +5,14 @@ model User {
     email String
     password String
     deviceId String
+    lastLogin DateTime
+    lastUpdatedTime DateTime
+    image String
+    role Role
+}
+
+enum Role {
+    READ_ONLY_ADMIN
+    READ_WRITE_ADMIN
+    USER
 }

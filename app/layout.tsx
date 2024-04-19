@@ -2,7 +2,8 @@ import "reflect-metadata";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import "@di/dependencyInjection"
+import "@di/dependencyInjection";
+import SideNavigationBar from "@components/atoms/ui/sideBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="w-full h-full flex">
+          <div>
+            <SideNavigationBar />
+          </div>
+          <div className="flex-grow">{children}</div>
+        </div>
+      </body>
     </html>
   );
 }
