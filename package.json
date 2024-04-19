@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "prisma-generate": "npx prisma-import -s prisma/models/config.prisma -s prisma/models/users/user.prisma -o prisma/schema.prisma -f"
