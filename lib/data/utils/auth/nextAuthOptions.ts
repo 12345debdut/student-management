@@ -4,7 +4,6 @@ import { IAuthRepository } from "@lib/data/repository/auth/IAuthRepository";
 import type { AuthOptions } from "next-auth";
 import CreadentialProvider from "next-auth/providers/credentials";
 import { container } from "tsyringe";
-import { LoginValidationError } from "@lib/data/models/user/AuthUserModel";
 
 export const CustomAuthOptions: AuthOptions = {
   providers: [

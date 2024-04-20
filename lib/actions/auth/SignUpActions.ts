@@ -1,15 +1,13 @@
 "use server";
 import "reflect-metadata";
-import "@di/dependencyInjection";
-import { AUTH_REPOSITORY } from "@di/constants";
 import {
   ResponseType,
   type SignUpResponseState,
 } from "@lib/data/models/auth/SignUpServerActionModel";
 import { type IAuthRepository } from "@lib/data/repository/auth/IAuthRepository";
-
-import { container } from "tsyringe";
 import { SignUpValidationDataModel } from "@lib/data/models/auth/SignUpValidationDataModel";
+import { container } from "tsyringe";
+import { AUTH_REPOSITORY } from "@di/constants";
 
 export async function createUser(
   prevState: SignUpResponseState,
