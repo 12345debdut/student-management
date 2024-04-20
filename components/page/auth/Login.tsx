@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import LoginForm from "./LoginForm";
 import { Card } from "@components/atoms/ui/card";
+import { SIGN_UP } from "@lib/config/urls";
 
 type Props = {
   className?: string;
@@ -23,7 +24,7 @@ const Login = (props: Props) => {
           <LoginForm {...props} />
           <div className="mt-4 text-center text-sm">
             Don&apos;t have an account?{" "}
-            <Link href="#" className="underline text-primary">
+            <Link href={SIGN_UP} className="underline text-primary">
               Sign up
             </Link>
           </div>

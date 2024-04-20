@@ -36,7 +36,7 @@ export default function SideBarItem(props: SideBarItemProps) {
               </div>
             </div>
           </AccordionTrigger>
-          <AccordionContent className="block w-full py-1 text-sm antialiased font-light leading-normal">
+          <AccordionContent className="block w-full py-1 text-base antialiased font-light leading-normal">
             {props.child.map((item) => (
               <SideBarSubItem
                 title={item.title}
