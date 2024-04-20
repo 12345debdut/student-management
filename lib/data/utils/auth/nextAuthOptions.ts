@@ -3,7 +3,7 @@ import { AUTH_REPOSITORY } from "@di/constants";
 import { IAuthRepository } from "@lib/data/repository/auth/IAuthRepository";
 import type { AuthOptions } from "next-auth";
 import CreadentialProvider from "next-auth/providers/credentials";
-import { container } from "tsyringe";
+import { serverContainer } from "@di/dependencyInjection";
 
 export const CustomAuthOptions: AuthOptions = {
   providers: [
@@ -22,7 +22,7 @@ export const CustomAuthOptions: AuthOptions = {
         },
       },
       async authorize(credentials, req) {
-        return (await container
+        return (await serverContainer
           .resolve<IAuthRepository>(AUTH_REPOSITORY)
           .login(credentials?.email ?? "", credentials?.password ?? "")) as any;
       },
@@ -34,7 +34,7 @@ export const CustomAuthOptions: AuthOptions = {
   callbacks: {
     signIn: async ({ user }): Promise<boolean> => {
       console.log("error: ", user.error);
-      return container
+      return serverContainer
         .resolve<IAuthRepository>(AUTH_REPOSITORY)
         .validateSignInRequest(user.error);
     },

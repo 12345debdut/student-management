@@ -32,3 +32,5 @@ container.register(AUTH_REPOSITORY, {
 container.register<PrismaClient>(DB_CLIENT, {
   useValue: prisma,
 });
+
+export const serverContainer = container;

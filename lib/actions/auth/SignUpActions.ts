@@ -1,12 +1,12 @@
 "use server";
 import "reflect-metadata";
+import { serverContainer } from "@di/dependencyInjection";
 import {
   ResponseType,
   type SignUpResponseState,
 } from "@lib/data/models/auth/SignUpServerActionModel";
 import { type IAuthRepository } from "@lib/data/repository/auth/IAuthRepository";
 import { SignUpValidationDataModel } from "@lib/data/models/auth/SignUpValidationDataModel";
-import { container } from "tsyringe";
 import { AUTH_REPOSITORY } from "@di/constants";
 
 export async function createUser(
@@ -18,7 +18,8 @@ export async function createUser(
   let confirmPassword = formData.get("confirmpassword")?.toString() ?? "";
   let firstName = formData.get("firstname")?.toString() ?? "";
   let lastName = formData.get("lastname")?.toString() ?? "";
-  let authRepository = container.resolve<IAuthRepository>(AUTH_REPOSITORY);
+  let authRepository =
+    serverContainer.resolve<IAuthRepository>(AUTH_REPOSITORY);
   let data: SignUpValidationDataModel = {
     email,
     password,
