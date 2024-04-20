@@ -4,29 +4,29 @@
 
 @layer base {
   :root {
-    --background: #191b24;
-    --foreground: #fff5e0;
+    --background: 25 27 36;
+    --foreground: 255 245 224;
 
-    --card: #20222c;
-    --card-foreground: #fff5e0;
+    --card: 32 34 44;
+    --card-foreground: 255 245 224;
 
-    --popover: #20222c;
-    --popover-foreground: #fff5e0;
+    --popover: 32 34 44;
+    --popover-foreground: 255 245 224;
 
-    --primary: #41b06e;
-    --primary-foreground: #fff5e0;
+    --primary: 65 176 110;
+    --primary-foreground: 255 245 224;
 
-    --secondary: #8decb4;
-    --secondary-foreground: #fff5e0;
+    --secondary: 41 236 180;
+    --secondary-foreground: 255 245 224;
 
-    --accent: #fff5e0;
-    --accent-foreground: #074173;
+    --accent: 255 245 224;
+    --accent-foreground: 25 27 36;
 
-    --destructive: #d64d4d;
-    --destruction-foreground: white;
+    --destructive: 214 77 77;
+    --destruction-foreground: 255 255 255;
 
-    --error: #f76f6f;
-    --error-foreground: white;
+    --error: 247 111 111;
+    --error-foreground: 255 255 255;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
@@ -36,29 +36,29 @@
   }
 
   .dark {
-    --background: #141e46;
-    --foreground: #fff5e0;
+    --background: 255 255 255;
+    --foreground: 255 245 224;
 
-    --card: #074173;
-    --card-foreground: #fff5e0;
+    --card: 32 34 44;
+    --card-foreground: 255 245 224;
 
-    --popover: #074173;
-    --popover-foreground: #fff5e0;
+    --popover: 32 34 44;
+    --popover-foreground: 255 245 224;
 
-    --primary: #41b06e;
-    --primary-foreground: #fff5e0;
+    --primary: 65 176 110;
+    --primary-foreground: 255 245 224;
 
-    --secondary: #8decb4;
-    --secondary-foreground: #fff5e0;
+    --secondary: 41 236 180;
+    --secondary-foreground: 255 245 224;
 
-    --accent: #fff5e0;
-    --accent-foreground: #074173;
+    --accent: 255 245 224;
+    --accent-foreground: 25 27 36;
 
-    --destructive: #d64d4d;
-    --destruction-foreground: white;
+    --destructive: 214 77 77;
+    --destruction-foreground: 255 255 255;
 
-    --error: #f76f6f;
-    --error-foreground: white;
+    --error: 247 111 111;
+    --error-foreground: 255 255 255;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;

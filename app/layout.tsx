@@ -1,8 +1,8 @@
 import "reflect-metadata";
+import "@di/dependencyInjection";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import "@di/dependencyInjection";
 import SideNavigationBar from "@components/atoms/ui/sideBar";
 
 const inter = Inter({ subsets: ["latin"] });

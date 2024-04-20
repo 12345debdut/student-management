@@ -27,16 +27,16 @@ datasource db {
 //
 
 model User {
-  id              Int      @id @default(autoincrement())
+  id              Int       @id @default(autoincrement())
   firstName       String
   lastName        String
   email           String
   password        String
-  deviceId        String
-  lastLogin       DateTime
+  lastLogin       DateTime?
   lastUpdatedTime DateTime
   image           String
   role            Role
+  approved        Boolean?
 }
 
 enum Role {

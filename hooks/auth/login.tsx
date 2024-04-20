@@ -25,11 +25,8 @@ export const useLogin = (props: LoginHookPropModel): LoginHookModel => {
       () => {
         goBack();
       },
-      () => {
-        console.log("Error occured!!");
-        setError(
-          "Login attempt failed!! Please try again with another username and password"
-        );
+      (error: string) => {
+        setError(error);
       }
     );
   };

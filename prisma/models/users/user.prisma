@@ -4,11 +4,11 @@ model User {
     lastName String
     email String
     password String
-    deviceId String
-    lastLogin DateTime
+    lastLogin DateTime?
     lastUpdatedTime DateTime
     image String
     role Role
+    approved Boolean?
 }
 
 enum Role {

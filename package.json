@@ -30,7 +30,8 @@
     "reflect-metadata": "^0.2.2",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
-    "tsyringe": "^4.8.0"
+    "tsyringe": "^4.8.0",
+    "zod": "^3.22.5"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
